@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/cat"/>
+            tools:src="@drawable/cat"
+            />
 
         <TextView
             android:id="@+id/owl_name"
@@ -29,7 +30,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/owl_image"
             app:layout_constraintTop_toTopOf="parent"
-
+            android:textSize="20sp"
             tools:text="Owls Name"
             />
 
@@ -38,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="latin name"
+            android:textStyle="italic"
             app:layout_constraintTop_toBottomOf="@id/owl_name"
             app:layout_constraintStart_toStartOf="@id/owl_name"
             />
