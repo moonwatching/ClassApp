@@ -18,11 +18,11 @@ class OwlDetailFragment : Fragment() {
 
         if (arguments != null) {
             val name = requireArguments().getString("name")
-            val latin = requireArguments().getString("name")
-            val wingspan = requireArguments().getString("name")
-            val id = requireArguments().getString("name")
-            val image = requireArguments().getString("name")
-            val habitat = requireArguments().getString("name")
+            val latin = requireArguments().getString("latin")
+            val wingspan = requireArguments().getString("wingspan")
+            val id = requireArguments().getString("id")
+            val image = requireArguments().getString("image")
+            val habitat = requireArguments().getString("habitat")
         }
 
         view.findViewById<TextView>(R.id.owl_habitat_text)

@@ -5,11 +5,61 @@
     android:layout_height="match_parent"
     tools:context=".ui.OwlDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/owl_habitat_text"
+<!--    Image, Description, Name, Latin, Habitat, Wingspan, id  -->
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/detail_view_owl_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+
+        />
+
+    <TextView
+        android:id="@+id/detail_view_owl_description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="Description"
+
+
+        />
+
+    <TextView
+        android:id="@+id/detail_view_owl_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="Name"
+
+        />
+
+    <TextView
+        android:id="@+id/detail_view_owl_latin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="Latin"
+
+        />
+
+    <TextView
+        android:id="@+id/detail_view_owl_habitat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="habitat"
+        />
+
+    <TextView
+        android:id="@+id/detail_view_owl_wingspan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="wingspan"
+
+        />
+
+    <TextView
+        android:id="@+id/detail_view_owl_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="id"
+
+        />
+
 
 </FrameLayout>

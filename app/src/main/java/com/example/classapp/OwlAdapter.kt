@@ -17,7 +17,7 @@ class OwlAdapter(private val owls: List<Owl>) : RecyclerView.Adapter<OwlAdapter.
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OwlViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.owl_card_view, parent, false)
-        return OwlViewHolder(view) {position ->
+        return OwlViewHolder(view) { position ->
             val owl = owls[position]
 
             val bundle = bundleOf(
@@ -36,7 +36,7 @@ class OwlAdapter(private val owls: List<Owl>) : RecyclerView.Adapter<OwlAdapter.
 
             activity.supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                replace(R.id.fragment_container_view,detailFragment)
+                replace(R.id.fragment_container_view, detailFragment)
                 addToBackStack(null)
             }
         }

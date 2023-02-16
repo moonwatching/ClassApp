@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="16dp"
     android:elevation="8dp"
-    app:cardCornerRadius="6dp"
     app:cardBackgroundColor="@android:color/holo_blue_light"
-    >
+    app:cardCornerRadius="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,68 +17,55 @@
             android:id="@+id/owl_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minHeight="100dp"
-            android:minWidth="50dp"
+            android:layout_marginHorizontal="3dp"
             android:maxWidth="50dp"
             android:maxHeight="100dp"
-            android:layout_marginHorizontal="3dp"
+            android:minWidth="50dp"
+            android:minHeight="100dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/cat"
-            />
+            tools:src="@drawable/cat" />
 
         <TextView
             android:id="@+id/owl_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/owl_image"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginHorizontal="8dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
             android:shadowColor="#000000"
             android:shadowDx="2"
             android:shadowDy="2"
             android:shadowRadius="1.6"
-            tools:text="Owls Name"
-            />
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/owl_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Owls Name" />
 
         <TextView
             android:id="@+id/owl_latin_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="latin name"
             android:textStyle="italic"
-            app:layout_constraintTop_toBottomOf="@id/owl_name"
             app:layout_constraintStart_toStartOf="@id/owl_name"
-            />
+            app:layout_constraintTop_toBottomOf="@id/owl_name"
+            tools:text="latin name" />
 
         <TextView
             android:id="@+id/owl_wingspan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="50 (wingspan)"
-            app:layout_constraintTop_toBottomOf="@id/owl_latin_name"
             app:layout_constraintStart_toStartOf="@id/owl_latin_name"
-            />
+            app:layout_constraintTop_toBottomOf="@id/owl_latin_name"
+            tools:text="50 (wingspan)" />
+
         <TextView
             android:id="@+id/owl_habitat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="habitat"
-            app:layout_constraintTop_toBottomOf="@id/owl_wingspan"
             app:layout_constraintStart_toStartOf="@id/owl_wingspan"
-            />
-        <TextView
-            android:id="@+id/owl_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="id"
-            app:layout_constraintTop_toBottomOf="@id/owl_habitat"
-            app:layout_constraintStart_toStartOf="@id/owl_habitat"
-            />
-
+            app:layout_constraintTop_toBottomOf="@id/owl_wingspan"
+            tools:text="habitat" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
