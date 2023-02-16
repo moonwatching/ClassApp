@@ -1,5 +1,6 @@
 package com.example.classapp
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,7 +27,8 @@ class OwlAdapter(private val owls: List<Owl>) : RecyclerView.Adapter<OwlAdapter.
                 "wingspan" to owl.wingspan,
                 "image" to owl.image,
                 "id" to owl.id,
-                "habitat" to owl.habitat
+                "habitat" to owl.habitat,
+                "description" to owl.description
             )
 
             val detailFragment = OwlDetailFragment()
@@ -44,6 +46,7 @@ class OwlAdapter(private val owls: List<Owl>) : RecyclerView.Adapter<OwlAdapter.
 
     override fun getItemCount() = owls.size
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: OwlViewHolder, position: Int) {
         val owl = owls[position]
 //        holder.owlImage.setImageResource(owl.image)
@@ -51,8 +54,8 @@ class OwlAdapter(private val owls: List<Owl>) : RecyclerView.Adapter<OwlAdapter.
         Glide.with(holder.itemView.context).load(owl.image).into(holder.owlImage)
         holder.owlName.text = owl.name
         holder.owlLatinName.text = owl.latin
-        holder.owlWingspan.text = owl.wingspan.toString()
-        holder.owlHabitat.text = owl.habitat.toString()
+        holder.owlWingspan.text = ("Wingspan: " + owl.wingspan.toString() + " inches")
+        holder.owlHabitat.text = owl.habitat
     }
 
     inner class OwlViewHolder(

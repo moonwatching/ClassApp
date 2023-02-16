@@ -1,68 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#656565"
     tools:context=".ui.OwlDetailFragment">
 
-<!--    Image, Description, Name, Latin, Habitat, Wingspan, id  -->
-    <androidx.constraintlayout.utils.widget.ImageFilterView
-        android:id="@+id/detail_view_owl_image"
+
+    <!--    Image, Description, Name, Latin, Habitat, Wingspan, id  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:maxWidth="50dp"
-        android:maxHeight="100dp"
-        android:minWidth="50dp"
-        android:minHeight="100dp"
-        />
+        android:layout_height="wrap_content"
+        android:padding="20dp">
 
-    <TextView
-        android:id="@+id/detail_view_owl_description"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:text="Description"
+        <ImageView
+            android:id="@+id/detail_view_owl_image"
+            android:layout_width="330dp"
+            android:layout_height="250dp"
+            android:layout_marginVertical="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/white"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/baseline_draw_24" />
+
+        <ImageView
+            android:id="@+id/detail_view_image_border"
+            android:layout_width="334dp"
+            android:layout_height="250dp"
+            android:layout_marginVertical="8dp"
+            android:src="@drawable/border_large_resource"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/detail_view_owl_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="5dp"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1.6"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_image"
+            tools:text="Name"
+
+            />
+
+        <TextView
+            android:id="@+id/detail_view_owl_latin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shadowColor="#000000"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="0.8"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_name"
+            tools:text="Latin"
 
 
-        />
+            />
 
-    <TextView
-        android:id="@+id/detail_view_owl_name"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:text="Name"
+        <TextView
+            android:id="@+id/detail_view_owl_habitat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="3dp"
+            android:shadowColor="#000000"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="0.8"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_latin"
+            tools:text="habitat"
 
-        />
+            />
 
-    <TextView
-        android:id="@+id/detail_view_owl_latin"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:text="Latin"
+        <TextView
+            android:id="@+id/detail_view_owl_wingspan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shadowColor="#000000"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="0.8"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_habitat"
+            tools:text="wingspan"
 
-        />
+            />
 
-    <TextView
-        android:id="@+id/detail_view_owl_habitat"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:text="habitat"
-        />
+        <TextView
+            android:id="@+id/detail_view_owl_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="14dp"
+            android:shadowColor="#000000"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="0.8"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_wingspan"
+            tools:text="    The barn owl (Tyto alba) is the most widely distributed species of owl in the world and one of the most widespread of all species of birds, being found almost everywhere except for the polar and desert regions, Asia north of the Himalayas, most of Indonesia, and some Pacific Islands. It is also known as the common barn owl, to distinguish it from the other species in its family, Tytonidae, which forms one of the two main lineages of living owls, the other being the typical owls (Strigidae)."
 
-    <TextView
-        android:id="@+id/detail_view_owl_wingspan"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:text="wingspan"
+            />
 
-        />
+        <TextView
+            android:id="@+id/detail_view_owl_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="15dp"
+            android:shadowColor="#000000"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="0.8"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_description"
+            tools:text="id"
 
-    <TextView
-        android:id="@+id/detail_view_owl_id"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:text="id"
-
-        />
-
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

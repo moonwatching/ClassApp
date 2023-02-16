@@ -6,5 +6,6 @@ data class Owl(
     val image: String,
     val wingspan: Int,
     val id: Int,
-    val habitat: String
+    val habitat: String,
+    val description: String
 )
