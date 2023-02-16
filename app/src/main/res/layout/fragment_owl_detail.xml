@@ -10,7 +10,7 @@
 
     <!--    Image, Description, Name, Latin, Habitat, Wingspan, id  -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp">
 
@@ -41,8 +41,8 @@
 
         <TextView
             android:id="@+id/detail_view_owl_name"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
             android:shadowColor="#000000"
             android:shadowDx="2"
@@ -59,8 +59,8 @@
 
         <TextView
             android:id="@+id/detail_view_owl_latin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:shadowColor="#000000"
             android:shadowDx="1.2"
             android:shadowDy="1.2"
@@ -77,8 +77,8 @@
 
         <TextView
             android:id="@+id/detail_view_owl_habitat"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="3dp"
             android:shadowColor="#000000"
             android:shadowDx="1.2"
@@ -94,8 +94,8 @@
 
         <TextView
             android:id="@+id/detail_view_owl_wingspan"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:shadowColor="#000000"
             android:shadowDx="1.2"
             android:shadowDy="1.2"
@@ -110,7 +110,7 @@
 
         <TextView
             android:id="@+id/detail_view_owl_description"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="14dp"
             android:shadowColor="#000000"
@@ -127,8 +127,8 @@
 
         <TextView
             android:id="@+id/detail_view_owl_id"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginVertical="15dp"
             android:shadowColor="#000000"
             android:shadowDx="1.2"

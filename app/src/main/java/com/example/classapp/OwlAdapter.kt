@@ -46,11 +46,9 @@ class OwlAdapter(private val owls: List<Owl>) : RecyclerView.Adapter<OwlAdapter.
 
     override fun getItemCount() = owls.size
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n") //error handling localization which we don't really care about in a personal app
     override fun onBindViewHolder(holder: OwlViewHolder, position: Int) {
         val owl = owls[position]
-//        holder.owlImage.setImageResource(owl.image)
-//        Glide.with(this).load("http://goo.gl/gEgYUd").into(imageView)
         Glide.with(holder.itemView.context).load(owl.image).into(holder.owlImage)
         holder.owlName.text = owl.name
         holder.owlLatinName.text = owl.latin
