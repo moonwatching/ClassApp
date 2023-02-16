@@ -25,7 +25,7 @@ class OwlDetailFragment : Fragment() {
             val habitat = requireArguments().getString("habitat")
         }
 
-        view.findViewById<TextView>(R.id.owl_habitat_text)
+        view.findViewById<TextView>(R.id.detail_view_owl_id)
         return view
     }
 }

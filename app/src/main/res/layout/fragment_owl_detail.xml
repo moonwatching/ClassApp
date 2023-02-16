@@ -10,7 +10,10 @@
         android:id="@+id/detail_view_owl_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
+        android:maxWidth="50dp"
+        android:maxHeight="100dp"
+        android:minWidth="50dp"
+        android:minHeight="100dp"
         />
 
     <TextView
