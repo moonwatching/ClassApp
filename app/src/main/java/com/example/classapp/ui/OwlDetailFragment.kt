@@ -1,45 +1,48 @@
 package com.example.classapp.ui
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.core.os.bundleOf
+import androidx.fragment.app.activityViewModels
 import com.bumptech.glide.Glide
-import com.example.classapp.R
+import com.example.classapp.databinding.FragmentOwlDetailBinding
+import com.example.classapp.viewmodel.OwlViewModel
 
 class OwlDetailFragment : Fragment() {
-    @SuppressLint("SetTextI18n")
+    private val owlViewModel: OwlViewModel by activityViewModels()
+
+    private var _binding: FragmentOwlDetailBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_owl_detail, container, false)
+        _binding = FragmentOwlDetailBinding.inflate(inflater, container, false)
 
         if (arguments != null) {
-            val name = requireArguments().getString("name")
-            val latin = requireArguments().getString("latin")
-            val wingspan = requireArguments().getInt("wingspan")
-            val id = requireArguments().getInt("id")
-            val image = requireArguments().getString("image")
-            val habitat = requireArguments().getString("habitat")
-            val description = requireArguments().getString("description")
+            val owl = owlViewModel.fetchById(requireArguments().getInt(BUNDLE_ID))
 
-            view.findViewById<TextView>(R.id.detail_view_owl_name).text = name
-            view.findViewById<TextView>(R.id.detail_view_owl_latin).text = latin
-            view.findViewById<TextView>(R.id.detail_view_owl_wingspan).text =
-                ("Wingspan: $wingspan inches")
-            view.findViewById<TextView>(R.id.detail_view_owl_id).text = "ID: $id"
-            Glide.with(this).load(image).into(view.findViewById(R.id.detail_view_owl_image))
-            view.findViewById<TextView>(R.id.detail_view_owl_description).text = description
-            view.findViewById<TextView>(R.id.detail_view_owl_habitat).text = ("Habitat: $habitat")
+            Glide.with(requireContext()).load(owl.image).into(binding.detailViewOwlImage)
+            binding.detailViewOwlId.text = owl.id.toString()
+            binding.detailViewOwlName.text = owl.name
+            binding.detailViewOwlDescription.text = owl.description
+            binding.detailViewOwlLatin.text = owl.latin
+            binding.detailViewOwlHabitat.text = owl.habitat
+            binding.detailViewOwlWingspan.text = owl.wingspan.toString()
 
         }
 
+        return binding.root
+    }
 
-        return view
+    companion object {
+        private const val BUNDLE_ID = "id"
+        fun newInstance(id: Int) = OwlDetailFragment().apply {
+            arguments = bundleOf(BUNDLE_ID to id)
+        }
     }
 }
