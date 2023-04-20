@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#656565"
-    tools:context=".ui.OwlDetailFragment">
+    tools:context=".ui.BirdDetailFragment">
 
 
     <!--    Image, Description, Name, Latin, Habitat, Wingspan, id  -->
@@ -15,7 +15,7 @@
         android:padding="20dp">
 
         <ImageView
-            android:id="@+id/detail_view_owl_image"
+            android:id="@+id/detail_view_bird_image"
             android:layout_width="330dp"
             android:layout_height="250dp"
             android:layout_marginVertical="8dp"
@@ -40,7 +40,7 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/detail_view_owl_name"
+            android:id="@+id/detail_view_bird_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
@@ -52,13 +52,13 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_image"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_bird_image"
             tools:text="Name"
 
             />
 
         <TextView
-            android:id="@+id/detail_view_owl_latin"
+            android:id="@+id/detail_view_bird_latin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:shadowColor="#000000"
@@ -69,14 +69,14 @@
             android:textSize="18sp"
             android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_name"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_bird_name"
             tools:text="Latin"
 
 
             />
 
         <TextView
-            android:id="@+id/detail_view_owl_habitat"
+            android:id="@+id/detail_view_bird_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="3dp"
@@ -87,13 +87,13 @@
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_latin"
-            tools:text="habitat"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_bird_latin"
+            tools:text="location"
 
             />
 
         <TextView
-            android:id="@+id/detail_view_owl_wingspan"
+            android:id="@+id/detail_view_bird_lat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:shadowColor="#000000"
@@ -103,43 +103,56 @@
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_habitat"
-            tools:text="wingspan"
-
+            app:layout_constraintTop_toBottomOf="@id/detail_view_bird_location"
+            tools:text="latitude"
             />
 
         <TextView
-            android:id="@+id/detail_view_owl_description"
+            android:id="@+id/detail_view_bird_long"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="14dp"
             android:shadowColor="#000000"
             android:shadowDx="1.2"
             android:shadowDy="1.2"
             android:shadowRadius="0.8"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_wingspan"
-            tools:text="    The barn owl (Tyto alba) is the most widely distributed species of owl in the world and one of the most widespread of all species of birds, being found almost everywhere except for the polar and desert regions, Asia north of the Himalayas, most of Indonesia, and some Pacific Islands. It is also known as the common barn owl, to distinguish it from the other species in its family, Tytonidae, which forms one of the two main lineages of living owls, the other being the typical owls (Strigidae)."
-
+            app:layout_constraintTop_toBottomOf="@id/detail_view_bird_lat"
+            tools:text="longitude"
             />
 
         <TextView
-            android:id="@+id/detail_view_owl_id"
+            android:id="@+id/detail_view_bird_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="15dp"
             android:shadowColor="#000000"
             android:shadowDx="1.2"
             android:shadowDy="1.2"
             android:shadowRadius="0.8"
             android:textColor="@android:color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detail_view_owl_description"
-            tools:text="id"
-
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="birdid"
             />
+        <TextView
+            android:id="@+id/detail_view_bird_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="#000000"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="0.8"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_view_bird_image"
+            tools:text="birdcount"
+            />
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

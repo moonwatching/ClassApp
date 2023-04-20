@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ClassApp</string>
+    <string name="app_name">BirdApp</string>
     <string name="cat">catcatcatcatatcatcatcatatcatcatcatatcatcatcatatcatcatcat atcatcatcatatcatcatcatatcatcatcatatcatcatcat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
